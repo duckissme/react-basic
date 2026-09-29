@@ -1,0 +1,23 @@
+.bai3 {
+    display: grid;
+    
+    gap: 10px;
+
+    .question-1 {
+        display: flex;
+        justify-content: left;
+        gap: 10px;
+    }
+
+    .question-2 {
+        display: flex;
+        justify-content: left;
+        gap: 10px;
+    }
+
+    .question-3 {
+        display: flex;
+        justify-content: left;
+        gap: 10px;
+    }
+}

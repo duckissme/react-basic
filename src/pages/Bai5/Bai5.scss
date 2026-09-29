@@ -1,0 +1,36 @@
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    gap: 5px;
+
+    .error {
+        color: red;
+    }
+    label {
+        font-weight: 450;
+    }
+    button {
+        margin-top: 10px;
+        padding: 10px;
+        color: black;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+
+        &:hover {
+            background-color: bisque;
+        }
+    }
+    .is_success {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+        color: green;
+    }
+}

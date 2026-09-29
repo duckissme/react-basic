@@ -1,0 +1,40 @@
+.bai2 {
+    height: 100% !important;
+    width: 100% !important;
+    gap: 10px;
+
+    .btn-1 {
+        background-color: red;
+        margin-right: 10px;
+    }
+
+    .btn-2 {
+        background-color: blue;
+        margin-right: 10px;
+    }
+
+    .btn-3 {
+        background-color: green;
+        margin-right: 10px;
+    }
+
+    .btn-4 {
+        background-color: yellow;
+    }
+
+    .clicked1 {
+        border: 3px solid black;
+    }
+
+    .clicked2 {
+        border: 3px solid black;
+    }
+
+    .clicked3 {
+        border: 3px solid black;
+    }
+
+    .clicked4 {
+        border: 3px solid black;
+    }
+}

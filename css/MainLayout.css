@@ -1,0 +1,15 @@
+.main-layout {
+  display: flex;
+}
+.main-layout .sidemenu {
+  height: 100vh;
+  position: sticky;
+  background-color: #e8e6e6;
+}
+.main-layout .sidemenu .ps-sidebar-root {
+  height: 100% !important;
+}
+.main-layout .main-content {
+  width: 100%;
+  padding: 20px;
+}/*# sourceMappingURL=MainLayout.css.map */

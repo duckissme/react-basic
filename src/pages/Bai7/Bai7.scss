@@ -1,0 +1,16 @@
+.bai7 {
+    .input-todo {
+        display: flex;
+        gap: 10px;
+    }
+
+    .list-todo {
+        .item-todo {
+            display: flex;
+            margin-bottom: 5px;
+            button {
+                margin-left: 10px;
+            }
+        }
+    }
+}

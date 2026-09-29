@@ -1,0 +1,19 @@
+.bai3 {
+  display: grid;
+  gap: 10px;
+}
+.bai3 .question-1 {
+  display: flex;
+  justify-content: left;
+  gap: 10px;
+}
+.bai3 .question-2 {
+  display: flex;
+  justify-content: left;
+  gap: 10px;
+}
+.bai3 .question-3 {
+  display: flex;
+  justify-content: left;
+  gap: 10px;
+}/*# sourceMappingURL=Bai3.css.map */
