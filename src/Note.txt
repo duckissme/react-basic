@@ -1,0 +1,51 @@
+1. useState
+- useState được sử dụng để lưu và thay đổi giá trị của 1 biến với 2 tham số chính 
+là tên biến (dữ liệu vào là dữ liệu nguyên thủy hoặc tham chiếu) và 1 tham số set để 
+thay đổi giá trị của biến đó
+- Ví dụ: const [point, setPoint] = useState(1), biến point được khởi tạo giá trị ban
+đầu là 1 và khi cần thay đổi dữ liệu sang 2 thì sẽ sử dụng setPoint(2)
+- Mỗi khi biến được thiết lập mới thông qua set thì react sẽ re-render lại component
+
+2. Các hàm xử lý sự kiện onClick, onChange, onSubmit
+- Các hàm sẽ được kích hoạt khi người dùng có thao tác trực tiếp trên giao diện
+- Ví dụ:
+    + Click vào 1 button có chứa sự kiện onClick => onClick được kích hoạt
+    + Thay đổi giá trị trong ô input chứa sự kiện onChange => onChange được kích hoạt
+    => onChange thường được kết hợp với useState để có thể thay đổi giá trị biến mà người dùng
+    nhập từ bàn phím theo thời gian thực
+
+3. Rendering có điều kiện
+- Giao diện được render ra phụ thuộc vào điều kiện của một biến
+- Ví dụ: biến isChecked được khai báo state nhận giá trị false biểu diễn cho việc giao diện
+đang ẩn nội dung. Khi người dùng click nút check => isChecked được set true => Giao diện được
+rerender lại lúc này thấy giá trị isChecked = true => Render ra nội dung hiển thị
+
+4. useEffect
+- useEffect được gọi tới mỗi khi component lần đầu tiên được render hoặc khi có biến mà useEffect
+dùng để bắt sự kiện có sự thay đổi
+- 1 useEffect biến mất khi component hiện tại unmount hoặc khi 1 useEffect mới xuất hiện
+(sự kiện biến thay đổi)
+- Khi được gọi, useEffect sẽ chạy lần lượt các câu lệnh/hàm có trong đó, ngoại trừ câu lệnh/hàm return,
+return sẽ được useEffect gọi tới khi useEffect bị gọi chạy lại hoặc component bị unmount để giải phóng 
+dữ liệu, tránh xung đột
+- Thường được dùng trong việc lấy dữ liệu từ BE, xử lý dữ liệu, đổ dữ liệu vào state và rerender lại giao diện
+
+5. setInterval/clearInterval
+- setInterval là một hàm được sử dụng để lặp lại một đoạn code sau một khoảng thời gian xác định
+- clearInterval được sử dụng để giải phóng interval đang được sử dụng
+- Mỗi interval khi được khởi tạo sẽ chạy độc lập => Khi khởi tạo 1 interval mới mà interval cũ không
+còn dùng nữa thì nên giải phóng để tránh lãng phí tài nguyên 
+
+6. Props
+- Props được sử dụng để truyền dữ liệu từ component cha sang component con
+- Component con sẽ hứng dữ liệu thông qua props, cũng có thể truyền các phương thức từ Component cha
+xuống Component con để có thể cập nhật state của Component cha 
+
+7. Các hàm xử lý khác
+- Map: Được sử dụng cho 1 mảng để trả về 1 mảng hoàn toàn mới mà không ảnh hưởng tới mảng cũ
+=> Dựa trên các câu lệnh, điều kiện để xử lý trả về mảng phù hợp với bài toán 
+- Filter: Được sử dụng cho 1 mảng để lọc ra các giá trị thỏa mãn điều kiện có trong mảng đó. Các giá trị
+mới được lọc ra sẽ tạo thành mảng mới và không ảnh hưởng mảng cũ
+=> Có thể sử dụng để loại bỏ 1 giá trị ra khỏi mảng
+- Toán tử (...): Được sử dụng để copy các giá trị hiện tại của 1 mảng
+=> Có thể sử dụng để thêm giá trị mới cho mảng, cập nhật lại 1 biến của Object

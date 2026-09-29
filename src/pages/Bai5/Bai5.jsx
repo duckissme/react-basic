@@ -2,17 +2,24 @@ import { useState } from 'react';
 import './Bai5.scss';
 
 const Bai5 = () => {
+    //Khởi tạo các trường state nhập dữ liệu name/email/password
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    //Khởi tạo state errors để lưu các lỗi xuất hiện
     const [errors, setErrors] = useState({});
+    //Khởi tạo state isSuccess, làm điều kiện để hiển thị đăng ký thành công
     const [isSuccess, setIsSuccess] = useState(false);
 
+    //validate dữ liệu
     const validate = () => {
+        //Khởi tạo đối tượng newErrors để lưu các lỗi liên quan
+        //Mỗi khi có lỗi sẽ thêm vào đối tượng 1 key là loại lỗi và value là thông tin lỗi
         const newErrors = {}
         if (!name.trim()) {
             newErrors.name = "Họ tên không được để trống";
         }
+        //Regex xử lý email chứa @ và .
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!email.trim()) {
             newErrors.email = "Email không được để trống";
@@ -40,6 +47,7 @@ const Bai5 = () => {
         setIsSuccess(true);
     }
     return (
+        // Nếu mỗi trường có xuất hiện errors tương ứng thì hiển thị lỗi dưới ô input
         <form className="signup-form" onSubmit={handleSubmit}>
             <label htmlFor="name">Name:</label>
             <input type="text" id="name" name="name" value={name} onChange={(e) => setName(e.target.value)} required />
@@ -54,6 +62,7 @@ const Bai5 = () => {
             {errors.password && errors.password.length > 0 ?
                 <div className='error'>{errors.password}</div> : <></>}
             <button type="button" onClick={handleSubmit}>Sign Up</button>
+            {/* Hiển thị đăng ký thành công nếu isSuccess = true */}
             {isSuccess ? <div className='is_success'>Đăng ký tài khoản thành công</div> : <></>}
         </form>
     );

@@ -2,9 +2,14 @@ import { useState } from "react";
 import './Bai3.scss';
 
 const Bai3 = () => {
+    //Khởi tạo hàm checked cho từng dòng để xử lý Xem thêm/Thu gọn nội dung
     const [checked1, setChecked1] = useState(false);
     const [checked2, setChecked2] = useState(false);
     const [checked3, setChecked3] = useState(false);
+
+    // Khi click vào nút Xem thêm/Thu gọn, checked sẽ được set giá trị ngược lại đang có true => false / false => true
+    // Nếu giá trị checked = true, nút Xem thêm được hiện và nội dung bị ẩn đi
+    // Nếu giá trị checked = false, nút Thu gọn được hiện và nội dung được hiển thị
     return (
         <div className="bai3">
             <div className="question-1">
