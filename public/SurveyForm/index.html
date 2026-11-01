@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Survey Form</title>
+</head>
+
+<body>
+    <header>
+        <h1 id="title">freeCodeCamp Survey Form</h1>
+        <p id="description">Thank you for taking the time to help us improve the platform</p>
+    </header>
+    <main>
+        <form id="survey-form">
+            <label id="name-label">Name
+                <input id="name" type="text" placeholder="Enter your name" required>
+            </label>
+            </br>
+            <label id="email-label">Email
+                <input id="email" type="email" placeholder="Enter your email" required>
+            </label>
+            </br>
+            <label id="number-label">Age(optional)
+                <input id="number" type="number" min="3" max="100" placeholder="age">
+            </label>
+            </br>
+            <p>Which option best describes your current role?</p>
+            <select id="dropdown" name="role">
+                <option value="" disabled selected>Select current role</option>
+                <option value="full-time">Full Time Job</option>
+                <option value="part-time">Part Time Job</option>
+                <option value="student">Student</option>
+            </select>
+            <p>Would you recommend freeCodeCamp to a friend?</p>
+            <input id="definitely" type="radio" name="choice" value="definitely">
+            <label for="definitely">Definitely</label>
+            <input id="maybe" type="radio" name="choice" value="maybe">
+            <label for="maybe">Maybe</label>
+            <input id="not-sure" type="radio" name="choice" value="not-sure">
+            <label for="not-sure">Not Sure</label>
+            </br>
+            <p>What would you like to see improved? (Check all that apply)</p>
+            <input id="frontend" type="checkbox" value="frontend">
+            <label for="frontend">Frontend Project</label>
+            <input id="backend" type="checkbox" value="backend">
+            <label for="backend">Backend Project</label>
+            <input id="wiki" type="checkbox" value="wiki">
+            <label for="wiki">Wiki</label>
+            <p>Any comments or suggestions?</p>
+            <textarea cols="40" rows="5" placeholder="Enter your comment here..."></textarea>
+            <button id="submit" type="submit">Submit</button>
+        </form>
+    </main>
+</body>
+
+</html>
